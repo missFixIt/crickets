@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Crickets!!!!</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <img src="Cricket.jpg" alt="" id="cricketBtn" />
+      <audio src="crickets.mp3" id="myAudio" loop></audio>
+    </main>
+    <footer></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggleButton = document.getElementById("cricketBtn");
+        let isToggled = false;
+        let x = document.getElementById("myAudio");
+        toggleButton.addEventListener("click", function () {
+          isToggled = !isToggled;
+          if (isToggled == false) {
+            x.play();
+          } else if (isToggled == true) {
+            x.pause();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
