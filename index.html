@@ -15,18 +15,16 @@
     </main>
     <footer></footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var toggleButton = document.getElementById("cricketBtn");
-        let isToggled = false;
-        let x = document.getElementById("myAudio");
-        toggleButton.addEventListener("click", function () {
-          isToggled = !isToggled;
-          if (isToggled == false) {
-            x.play();
-          } else if (isToggled == true) {
-            x.pause();
-          }
-        });
+      var toggleButton = document.getElementById("cricketBtn");
+      let isToggled = false;
+      let x = document.getElementById("myAudio");
+      toggleButton.addEventListener("click", function () {
+        if (isToggled == false) {
+          x.play();
+        } else if (isToggled == true) {
+          x.pause();
+        }
+        isToggled = !isToggled;
       });
     </script>
   </body>
